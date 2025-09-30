@@ -562,3 +562,4 @@ export const foods = [
 ].map((foodDetails) => {
     return new Food(foodDetails);
 });
+
