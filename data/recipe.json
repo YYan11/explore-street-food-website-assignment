@@ -1,0 +1,935 @@
+[
+    {
+        "id": 1,
+        "title": "Ikan Bakar",
+        "description": "Grilled fish marinated with spices, usually wrapped in banana leaf and served with sambal.",
+        "image": "images/recipes/ikan_bakar.jpg",
+        "time": "30 mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "1 whole fish (e.g. stingray or mackerel)",
+            "Banana leaves",
+            "2 tbsp chili paste",
+            "1 tbsp turmeric powder",
+            "1 tbsp tamarind juice",
+            "Salt to taste"
+        ],
+        "instructions": [
+            "Clean the fish and make slits on both sides.",
+            "Marinate fish with chili paste, turmeric, tamarind juice, and salt.",
+            "Wrap fish in banana leaf.",
+            "Grill over charcoal until cooked and slightly charred.",
+            "Serve hot with sambal and rice."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Char Kway Teow",
+        "description": "Penang signature stir-fried noodles with prawns, eggs, and bean sprouts.",
+        "image": "images/recipes/char_kway_teow.jpg",
+        "time": "15 mins",
+        "difficulty": "Easy",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "200g flat noodles",
+            "100g prawns",
+            "1 egg",
+            "Bean sprouts",
+            "Chili paste"
+        ],
+        "instructions": [
+            "Heat wok, fry prawns.",
+            "Add noodles and egg.",
+            "Mix in bean sprouts and chili paste.",
+            "Serve hot."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Nasi Kandar",
+        "description": "Steamed rice served with a variety of curries and fried chicken.",
+        "image": "images/recipes/nasi_kandar.jpg",
+        "time": "20 mins",
+        "difficulty": "Hard",
+        "cuisine": "Indian",
+        "ingredients": [
+            "2 cups rice",
+            "Chicken curry",
+            "Fish curry",
+            "Fried chicken",
+            "Vegetables"
+        ],
+        "instructions": [
+            "Cook rice until fluffy.",
+            "Prepare assorted curries.",
+            "Fry chicken until crispy.",
+            "Serve rice with curries and sides."
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Pekasam Puyu",
+        "description": "A traditional Malay fermented dish made with freshwater fish (puyu), rice, and salt, giving a unique sour and savory flavor.",
+        "image": "images/recipes/pekasam_puyu.jpg",
+        "time": "20 mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "500g puyu (climbing perch fish), cleaned",
+            "1 cup roasted rice (ground)",
+            "3 tbsp salt",
+            "1 tbsp sugar",
+            "Bird’s eye chilies (optional)",
+            "Cooking oil (for frying)"
+        ],
+        "instructions": [
+            "Clean the fish thoroughly and drain excess water.",
+            "Rub the fish with salt and sugar, then coat with ground roasted rice.",
+            "Layer the fish in a container and add bird’s eye chilies if desired.",
+            "Seal the container and leave to ferment for 1–2 weeks.",
+            "When ready, deep fry the fish until golden and crispy.",
+            "Serve hot with steamed rice."
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Loh Bak",
+        "description": "A popular Chinese dish of marinated minced pork wrapped in bean curd skin and deep fried.",
+        "image": "images/recipes/loh_bak.jpg",
+        "time": "20 mins",
+        "difficulty": "Medium",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "500g minced pork",
+            "2 tbsp five-spice powder",
+            "2 tbsp light soy sauce",
+            "1 tbsp oyster sauce",
+            "1 egg",
+            "2 tbsp cornflour",
+            "1 sheet bean curd skin (fu pei)",
+            "Oil for deep frying"
+        ],
+        "instructions": [
+            "In a bowl, mix minced pork with five-spice powder, soy sauce, oyster sauce, egg, and cornflour.",
+            "Lay bean curd skin flat and cut into rectangular sheets.",
+            "Spoon pork mixture onto bean curd skin and roll into logs.",
+            "Seal the edges with a bit of water or egg wash.",
+            "Heat oil and deep fry until golden brown and crispy.",
+            "Slice and serve with chili sauce or sweet sauce."
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Apam Perlis",
+        "description": "A soft and fluffy traditional steamed rice cake, sweet and slightly sour from natural fermentation, popular in Perlis as a street snack or dessert.",
+        "image": "images/recipes/apam_perlis.jpg",
+        "time": "20 mins",
+        "difficulty": "Medium",
+        "cuisine": "Indian",
+        "ingredients": [
+            "2 cups rice flour",
+            "1 cup coconut milk",
+            "1/2 cup sugar",
+            "1 tsp yeast",
+            "1/4 tsp salt",
+            "Banana leaf (optional, for steaming)"
+        ],
+        "instructions": [
+            "Mix rice flour, sugar, yeast, and coconut milk into a smooth batter.",
+            "Cover and let the batter ferment for 4–6 hours until bubbly.",
+            "Prepare steamer and line with banana leaves if using.",
+            "Pour batter into small cups or moulds.",
+            "Steam for 15–20 minutes until cooked and fluffy.",
+            "Serve warm, plain or with grated coconut."
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Nasi Lemuni",
+        "description": "A herbal rice dish cooked with daun lemuni, giving it a unique aroma and slightly bitter taste, often enjoyed as a Malay breakfast in Perak.",
+        "image": "images/recipes/nasi_lemuni.jpg",
+        "time": "1h 30mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "2 cups rice",
+            "Daun Lemuni leaves",
+            "1 cup coconut milk",
+            "1 stalk lemongrass",
+            "Salt to taste"
+        ],
+        "instructions": [
+            "Wash and prepare daun lemuni leaves.",
+            "Cook rice with coconut milk, lemongrass, and daun lemuni.",
+            "Add salt to taste.",
+            "Serve hot with sambal, fried chicken, or anchovies."
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Ipoh Bean Sprout Chicken",
+        "description": "A famous Chinese dish from Ipoh, consisting of poached chicken served with crunchy bean sprouts and soy sauce.",
+        "image": "images/recipes/ipoh-bean_sprout_chicken.jpg",
+        "time": "2h 30mins",
+        "difficulty": "Hard",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "1 whole chicken",
+            "Bean sprouts",
+            "Soy sauce",
+            "Sesame oil",
+            "Garlic",
+            "Spring onions"
+        ],
+        "instructions": [
+            "Poach chicken until tender, then cut into pieces.",
+            "Blanch bean sprouts briefly in hot water.",
+            "Arrange chicken and bean sprouts on a plate.",
+            "Drizzle with soy sauce, sesame oil, and fried garlic.",
+            "Garnish with spring onions and serve with rice or noodles."
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Appam Perak",
+        "description": "A soft and fluffy South Indian-style fermented rice pancake, slightly sour and often paired with curry or coconut milk, popular in Perak.",
+        "image": "images/recipes/appam_perak.jpg",
+        "time": "5h",
+        "difficulty": "Medium",
+        "cuisine": "Indian",
+        "ingredients": [
+            "1 cup rice flour",
+            "1/2 cup coconut milk",
+            "1/4 tsp yeast",
+            "1 tbsp sugar",
+            "Pinch of salt"
+        ],
+        "instructions": [
+            "Mix rice flour, sugar, yeast, and coconut milk into a smooth batter.",
+            "Allow to ferment for 3-4 hours.",
+            "Heat a small pan and pour in batter, swirling to coat the edges.",
+            "Cover and cook until soft in the middle and crispy on the sides.",
+            "Serve hot with curry or sweet coconut milk."
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Satay Kajang",
+        "description": "Grilled skewers of meat served with peanut sauce.",
+        "image": "images/recipes/satay.jpg",
+        "time": "4h",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "Chicken/beef skewers",
+            "Peanut sauce",
+            "Cucumber"
+        ],
+        "instructions": [
+            "Marinate meat with spices.",
+            "Grill skewers until cooked.",
+            "Serve with peanut sauce and cucumber."
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Bak Kut Teh",
+        "description": "Pork rib herbal soup with garlic and herbs.",
+        "image": "images/recipes/bak_kut_teh.jpg",
+        "time": "2h",
+        "difficulty": "Medium",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "Pork ribs",
+            "Garlic",
+            "Chinese herbs",
+            "Soy sauce"
+        ],
+        "instructions": [
+            "Simmer pork ribs with herbs for 2 hours.",
+            "Serve hot with rice and fried dough sticks."
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Banana Leaf Rice",
+        "description": "A traditional South Indian meal served on a banana leaf, featuring steamed rice, assorted curries, vegetables, pickles, and fried snacks.",
+        "image": "images/recipes/banana_leaf_rice.jpg",
+        "time": "1h",
+        "difficulty": "Medium",
+        "cuisine": "Indian",
+        "ingredients": [
+            "2 cups steamed rice",
+            "Assorted curries (chicken, fish, or vegetable)",
+            "Sambar (lentil curry)",
+            "Vegetables (cabbage, beans, carrot)",
+            "Fried snacks (papadam, vadai)",
+            "Pickles and chutneys",
+            "Banana leaf for serving"
+        ],
+        "instructions": [
+            "Steam the rice until fluffy.",
+            "Prepare assorted curries, sambar, vegetables, and fried snacks.",
+            "Wash and pat dry a banana leaf.",
+            "Serve a portion of rice in the center of the banana leaf.",
+            "Arrange curries, vegetables, fried snacks, and pickles around the rice.",
+            "Eat with hands, mixing curries and rice as desired."
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Nyonya Laksa",
+        "description": "A spicy and tangy coconut-based noodle soup with prawns and tofu puffs, typical of Malacca's Nyonya cuisine.",
+        "image": "images/recipes/nyonya_laksa.jpg",
+        "time": "45 mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "Rice noodles",
+            "Coconut milk",
+            "Prawns",
+            "Tofu puffs",
+            "Laksa paste",
+            "Bean sprouts",
+            "Mint leaves"
+        ],
+        "instructions": [
+            "Prepare laksa paste and coconut milk base.",
+            "Cook prawns and tofu puffs in the soup.",
+            "Boil rice noodles separately.",
+            "Assemble noodles in a bowl, pour laksa soup on top.",
+            "Garnish with bean sprouts and mint leaves.",
+            "Serve hot."
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Chicken Rice Ball",
+        "description": "A traditional Malacca Chinese dish with steamed chicken and rice shaped into balls.",
+        "image": "images/recipes/chicken_rice_ball.jpg",
+        "time": "1h",
+        "difficulty": "Medium",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "2 cups rice",
+            "1 whole chicken",
+            "Soy sauce",
+            "Ginger",
+            "Garlic",
+            "Spring onions"
+        ],
+        "instructions": [
+            "Cook rice with chicken broth until fluffy.",
+            "Poach or steam the chicken until tender.",
+            "Shape rice into small balls.",
+            "Serve chicken pieces with rice balls and drizzle with soy sauce.",
+            "Garnish with ginger and spring onions."
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Putu Piring",
+        "description": "Steamed rice flour cakes filled with palm sugar and topped with grated coconut, a popular Indian/Malay dessert in Malacca.",
+        "image": "images/recipes/putu_piring.jpg",
+        "time": "40 mins",
+        "difficulty": "Medium",
+        "cuisine": "Indian",
+        "ingredients": [
+            "Rice flour",
+            "Palm sugar",
+            "Grated coconut",
+            "Banana leaf or small molds for steaming"
+        ],
+        "instructions": [
+            "Prepare rice flour mixture and form small cups.",
+            "Fill with palm sugar and top with grated coconut.",
+            "Steam for 10–15 minutes until cooked.",
+            "Serve warm as dessert or snack."
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Masak Lemak Cili Padi",
+        "description": "A traditional Malay dish from Negeri Sembilan made with chili padi and coconut milk, often cooked with fish or chicken, known for its rich and spicy flavor.",
+        "image": "images/recipes/masak_lemak_cili_padi.jpg",
+        "time": "55 mins",
+        "difficulty": "Easy",
+        "cuisine": "Malay",
+        "ingredients": [
+            "500g chicken or fish",
+            "200ml coconut milk",
+            "10 bird's eye chilies (cili padi)",
+            "2 stalks lemongrass",
+            "3 kaffir lime leaves",
+            "Salt to taste"
+        ],
+        "instructions": [
+            "Pound or blend chilies with lemongrass and other spices to make a paste.",
+            "Sauté the paste until fragrant.",
+            "Add chicken or fish and stir to coat with paste.",
+            "Pour in coconut milk and add kaffir lime leaves.",
+            "Simmer until cooked and flavors are absorbed.",
+            "Serve hot with steamed rice."
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Seremban-style Baked Crab",
+        "description": "A famous Chinese seafood dish from Seremban, Negeri Sembilan, featuring fresh crab baked with a savory and slightly sweet sauce.",
+        "image": "images/recipes/seremban_baked_crab.jpg",
+        "time": "35 mins",
+        "difficulty": "Hard",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "2 large crabs, cleaned",
+            "3 tbsp oyster sauce",
+            "2 tbsp soy sauce",
+            "1 tbsp sugar",
+            "2 cloves garlic, minced",
+            "1 tsp cornstarch (optional, for thickening)",
+            "Oil for brushing"
+        ],
+        "instructions": [
+            "Preheat oven to 180°C (350°F).",
+            "Clean crabs and crack claws slightly for flavor absorption.",
+            "Mix oyster sauce, soy sauce, sugar, and minced garlic to make the sauce.",
+            "Brush crabs with a little oil and place on a baking tray.",
+            "Pour the sauce over the crabs, ensuring even coating.",
+            "Bake for 20–25 minutes until crabs are cooked and sauce thickened.",
+            "Serve hot with steamed rice."
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Vadai",
+        "description": "A traditional South Indian deep-fried snack made from lentil batter, crispy on the outside and soft on the inside, popular in Malaysia.",
+        "image": "images/recipes/vadai.jpg",
+        "time": "30 mins",
+        "difficulty": "Medium",
+        "cuisine": "Indian",
+        "ingredients": [
+            "1 cup urad dal (split black gram lentils), soaked 4 hours",
+            "1 small onion, finely chopped",
+            "2 green chilies, finely chopped",
+            "1 tsp cumin seeds",
+            "Curry leaves (optional)",
+            "Salt to taste",
+            "Oil for deep frying"
+        ],
+        "instructions": [
+            "Drain soaked lentils and grind into a smooth batter.",
+            "Mix in onion, green chilies, cumin seeds, curry leaves, and salt.",
+            "Heat oil in a deep pan.",
+            "Shape batter into small patties or doughnut shapes.",
+            "Deep fry until golden brown and crispy.",
+            "Drain excess oil and serve hot with chutney or curry."
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Otak-Otak",
+        "description": "A traditional Malay snack from Johor made of spiced fish paste wrapped in banana leaves and grilled or steamed.",
+        "image": "images/recipes/otak-otak.jpg",
+        "time": "25 mins",
+        "difficulty": "Easy",
+        "cuisine": "Malay",
+        "ingredients": [
+            "300g fish paste (mackerel or tenggiri)",
+            "2 tbsp coconut milk",
+            "1 tbsp chili paste",
+            "1 tbsp turmeric powder",
+            "1 tsp salt",
+            "1 tsp sugar",
+            "Banana leaves for wrapping"
+        ],
+        "instructions": [
+            "Mix fish paste with coconut milk, chili paste, turmeric, salt, and sugar.",
+            "Cut banana leaves into rectangles and soften over heat.",
+            "Place a portion of fish paste on banana leaf and wrap tightly.",
+            "Grill over medium heat or steam until cooked.",
+            "Serve hot as snack or side dish."
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Laksa Johor",
+        "description": "A unique Johor-style laksa using spaghetti instead of rice noodles, served with a rich fish-based gravy and local herbs.",
+        "image": "images/recipes/laksa_johor.jpg",
+        "time": "40 mins",
+        "difficulty": "Hard",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "200g spaghetti",
+            "200g mackerel or fish of choice",
+            "200ml coconut milk",
+            "Laksa paste",
+            "Fresh herbs (daun kesum, mint)",
+            "Bean sprouts"
+        ],
+        "instructions": [
+            "Cook spaghetti until al dente and set aside.",
+            "Prepare fish-based gravy using laksa paste and coconut milk.",
+            "Add cooked fish to the gravy and simmer briefly.",
+            "Assemble spaghetti in a bowl, pour gravy on top.",
+            "Garnish with bean sprouts and fresh herbs.",
+            "Serve immediately."
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Kothu Parotta",
+        "description": "A flavorful South Indian dish made by chopping parotta and stir-frying with eggs, meat, and spices.",
+        "image": "images/recipes/kothu_parotta.jpg",
+        "time": "25 mins",
+        "difficulty": "Easy",
+        "cuisine": "Indian",
+        "ingredients": [
+            "2 parottas (or flatbreads), shredded",
+            "100g chicken/mutton/beef, cooked and chopped",
+            "1 egg",
+            "1 small onion, finely chopped",
+            "1 tomato, chopped",
+            "2 green chilies, chopped",
+            "2 cloves garlic, minced",
+            "1 tsp ginger paste",
+            "1 tsp curry powder or garam masala",
+            "Salt to taste",
+            "Oil for cooking",
+            "Fresh coriander for garnish"
+        ],
+        "instructions": [
+            "Heat oil in a pan and sauté onions, garlic, ginger, and green chilies until fragrant.",
+            "Add chopped meat and tomato, cook until heated through.",
+            "Push the mixture to one side and scramble the egg on the other side.",
+            "Mix in shredded parotta and curry powder, stir-fry everything together.",
+            "Cook for 3-5 minutes until well combined and slightly crispy.",
+            "Garnish with fresh coriander and serve hot."
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Gulai Ikan Temenung",
+        "description": "A traditional Malay fish curry from Kedah made with Temenung fish, coconut milk, and spices, known for its rich and aromatic flavor.",
+        "image": "images/recipes/gulai_ikan_temenung.jpg",
+        "time": "20 mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "500g Temenung fish (or mackerel), cleaned",
+            "200ml coconut milk",
+            "2 tbsp curry powder",
+            "3 cloves garlic, minced",
+            "1 onion, sliced",
+            "2 lemongrass stalks, bruised",
+            "10 bird's eye chilies (cili padi)",
+            "Salt and sugar to taste"
+        ],
+        "instructions": [
+            "Sauté garlic and onion until fragrant.",
+            "Add curry powder, lemongrass, and chilies, stir well.",
+            "Add fish and coat with spice mixture.",
+            "Pour in coconut milk and simmer until fish is cooked and sauce thickens.",
+            "Season with salt and sugar.",
+            "Serve hot with steamed rice."
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Curry Mee",
+        "description": "A spicy and flavorful Chinese noodle soup from Malaysia, made with coconut curry broth, noodles, tofu, bean sprouts, and sometimes seafood or chicken.",
+        "image": "images/recipes/curry_mee.jpg",
+        "time": "30 mins",
+        "difficulty": "Medium",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "200g yellow noodles or rice vermicelli",
+            "200ml coconut milk",
+            "100g tofu puffs",
+            "50g bean sprouts",
+            "100g cooked chicken or prawns (optional)",
+            "2 tbsp curry paste",
+            "1 clove garlic, minced",
+            "1 tsp chili paste",
+            "Salt to taste"
+        ],
+        "instructions": [
+            "Cook noodles according to package instructions and drain.",
+            "In a pot, sauté garlic and curry paste until fragrant.",
+            "Add coconut milk and chili paste, bring to a simmer.",
+            "Add tofu, bean sprouts, and optional chicken or prawns, cook until heated through.",
+            "Season with salt.",
+            "Serve noodles in a bowl and pour curry soup over. Garnish with herbs if desired."
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Roti Canai Tsunami",
+        "description": "A creative variation of the traditional Indian Muslim Roti Canai, known for its layered, fluffy texture and served with curry, popular in Kedah and northern Malaysia.",
+        "image": "images/recipes/roti-canai_tsunami.jpg",
+        "time": "5 mins",
+        "difficulty": "Easy",
+        "cuisine": "Indian",
+        "ingredients": [
+            "2 cups all-purpose flour",
+            "1/2 cup water",
+            "1 egg",
+            "2 tbsp ghee or oil",
+            "Salt to taste",
+            "Oil for frying"
+        ],
+        "instructions": [
+            "Mix flour, water, egg, ghee, and salt to form a smooth dough.",
+            "Knead well and let it rest for 1–2 hours.",
+            "Divide dough into small balls and roll into thin sheets.",
+            "Fold and roll sheets to create layered texture (like waves).",
+            "Pan-fry on medium heat with oil until golden and fluffy.",
+            "Serve hot with dhal curry or chicken curry."
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Nasi Kerabu",
+        "description": "Blue rice with herbs, fried chicken, and salted egg.",
+        "image": "images/recipes/nasi_kerabu.jpg",
+        "time": "1h 30mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "Blue rice",
+            "Herbs",
+            "Fried chicken",
+            "Salted egg"
+        ],
+        "instructions": [
+            "Cook rice with blue pea flower.",
+            "Fry chicken until crispy.",
+            "Serve with herbs and salted egg."
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Prawn Mee",
+        "description": "A flavorful Chinese noodle soup made with prawns, pork, and a rich shrimp-based broth, popular in Kelantan and other parts of Malaysia.",
+        "image": "images/recipes/prawn_mee.jpg",
+        "time": "40 mins",
+        "difficulty": "Medium",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "200g egg noodles",
+            "150g prawns, peeled and deveined",
+            "50g pork slices (optional)",
+            "2 cloves garlic, minced",
+            "1 liter water",
+            "Shrimp shells for broth",
+            "Bean sprouts",
+            "Spring onions",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "Boil shrimp shells in water to make a rich broth.",
+            "Sauté garlic and add prawns and pork slices, cook briefly.",
+            "Strain broth and return to pot, season with salt and pepper.",
+            "Cook noodles separately.",
+            "Assemble noodles in a bowl, pour hot prawn broth over, top with prawns, pork, bean sprouts, and spring onions.",
+            "Serve immediately."
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Roti Jala",
+        "description": "A traditional lacy Malaysian pancake popular in Kelantan, usually served with chicken or beef curry.",
+        "image": "images/recipes/roti_jala.jpg",
+        "time": "20 mins",
+        "difficulty": "Medium",
+        "cuisine": "Indian",
+        "ingredients": [
+            "2 cups all-purpose flour",
+            "2 eggs",
+            "1 cup coconut milk",
+            "1/2 tsp turmeric powder",
+            "1/2 tsp salt",
+            "Oil for frying"
+        ],
+        "instructions": [
+            "Mix flour, eggs, coconut milk, turmeric, and salt to form a smooth batter.",
+            "Pour batter through a roti jala mold onto a heated non-stick pan to form lacy pancakes.",
+            "Cook until lightly golden on both sides.",
+            "Serve with chicken or beef curry."
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Nasi Dagang Terengganu",
+        "description": "A traditional Terengganu Malay dish consisting of steamed coconut rice served with fish curry and pickled vegetables, popular for breakfast.",
+        "image": "images/recipes/nasi_dagang_terengganu.jpg",
+        "time": "1h 10mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "2 cups glutinous rice",
+            "1/2 cup coconut milk",
+            "2-3 pieces ikan tongkol (tuna) or mackerel",
+            "2 tbsp curry paste",
+            "Salt to taste",
+            "Pickled vegetables (acar) for serving"
+        ],
+        "instructions": [
+            "Soak glutinous rice for several hours, then steam until partially cooked.",
+            "Mix in coconut milk and continue steaming until fully cooked.",
+            "Prepare fish curry by cooking fish with curry paste and seasonings.",
+            "Serve coconut rice with fish curry on the side and pickled vegetables.",
+            "Enjoy hot, typically for breakfast."
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Teochew Porridge",
+        "description": "A light and comforting Chinese-style rice porridge popular in Terengganu, served with assorted side dishes like salted egg, pickled vegetables, and fried tofu.",
+        "image": "images/recipes/teochew_porridge.jpg",
+        "time": "20 mins",
+        "difficulty": "Easy",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "1 cup rice",
+            "6 cups water or chicken broth",
+            "Salt to taste",
+            "Assorted side dishes: salted egg, pickled vegetables, fried tofu, fish or chicken"
+        ],
+        "instructions": [
+            "Rinse rice and add to a pot with water or chicken broth.",
+            "Bring to a boil, then simmer on low heat for 45–60 minutes, stirring occasionally to prevent sticking.",
+            "Add salt to taste.",
+            "Serve porridge hot with assorted side dishes."
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Thosai",
+        "description": "A traditional South Indian thin pancake made from fermented rice and lentil batter, commonly served with curry or chutney, popular in Terengganu Indian Muslim stalls.",
+        "image": "images/recipes/thosai.jpg",
+        "time": "15 mins",
+        "difficulty": "Easy",
+        "cuisine": "Indian",
+        "ingredients": [
+            "1 cup rice",
+            "1/4 cup urad dal (split black lentils)",
+            "1/2 tsp fenugreek seeds",
+            "Salt to taste",
+            "Oil for cooking"
+        ],
+        "instructions": [
+            "Soak rice, urad dal, and fenugreek seeds separately for 4–6 hours.",
+            "Grind into a smooth batter and mix together, then let ferment overnight.",
+            "Heat a non-stick pan and spread a ladleful of batter thinly to form a pancake.",
+            "Drizzle a little oil around the edges and cook until golden and crispy.",
+            "Serve hot with sambar, coconut chutney, or curry."
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Ikan Patin Masak Tempoyak",
+        "description": "A traditional Pahang Malay dish featuring Patin fish cooked in a fermented durian (tempoyak) curry, known for its unique sour and spicy flavor.",
+        "image": "images/recipes/ikan_patin_masak_tempoyak.jpg",
+        "time": "30 mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "500g Patin fish, cleaned",
+            "100g tempoyak (fermented durian)",
+            "2 tbsp tamarind juice",
+            "2 cloves garlic, minced",
+            "1 onion, sliced",
+            "10 bird's eye chilies",
+            "200ml coconut milk",
+            "Salt and sugar to taste"
+        ],
+        "instructions": [
+            "Sauté garlic, onion, and chilies until fragrant.",
+            "Add tempoyak and tamarind juice, stir well.",
+            "Add Patin fish and pour in coconut milk.",
+            "Simmer until fish is cooked and sauce thickens.",
+            "Season with salt and sugar.",
+            "Serve hot with steamed rice."
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Durian Cendol",
+        "description": "A popular Malaysian dessert from Pahang featuring green rice flour jelly (cendol), coconut milk, palm sugar syrup, and fresh durian flesh.",
+        "image": "images/recipes/durian_cendol.jpg",
+        "time": "10 mins",
+        "difficulty": "Easy",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "100g green rice flour jelly (cendol)",
+            "200ml coconut milk",
+            "50g palm sugar syrup",
+            "100g fresh durian flesh",
+            "Crushed ice"
+        ],
+        "instructions": [
+            "Prepare cendol by boiling green rice flour jelly or buy pre-made.",
+            "In a bowl, add cendol and crushed ice.",
+            "Pour coconut milk and palm sugar syrup over.",
+            "Top with fresh durian flesh.",
+            "Serve immediately."
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Murtabak",
+        "description": "Stuffed flatbread with minced meat and egg, pan-fried.",
+        "image": "images/recipes/murtabak.jpg",
+        "time": "8 mins",
+        "difficulty": "Easy",
+        "cuisine": "Indian",
+        "ingredients": [
+            "Flour",
+            "Minced beef",
+            "Egg",
+            "Spices"
+        ],
+        "instructions": [
+            "Prepare dough and filling.",
+            "Stuff, fold, and fry.",
+            "Serve with curry."
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Midin Goreng",
+        "description": "A popular Sarawak Malay vegetable dish made from midin (wild jungle fern), stir-fried with garlic and shrimp paste, commonly served as a side dish.",
+        "image": "images/recipes/midin_goreng.jpg",
+        "time": "10 mins",
+        "difficulty": "Easy",
+        "cuisine": "Malay",
+        "ingredients": [
+            "200g midin (wild jungle fern), cleaned",
+            "2 cloves garlic, minced",
+            "1 tbsp shrimp paste (belacan)",
+            "1-2 red chilies, sliced",
+            "1 tbsp cooking oil",
+            "Salt to taste"
+        ],
+        "instructions": [
+            "Heat oil in a wok and sauté garlic and chilies until fragrant.",
+            "Add shrimp paste and stir-fry briefly.",
+            "Add midin and stir-fry for 3–4 minutes until cooked but still crisp.",
+            "Season with salt if needed.",
+            "Serve hot as a side dish."
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Kolo Mee",
+        "description": "Dry tossed noodles with char siu and minced meat.",
+        "image": "images/recipes/kolo-mee.jpg",
+        "time": "4 mins",
+        "difficulty": "Easy",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "Egg noodles",
+            "Char siu",
+            "Minced pork",
+            "Soy sauce"
+        ],
+        "instructions": [
+            "Boil noodles, toss with soy sauce.",
+            "Top with char siu and minced pork.",
+            "Serve hot."
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Mee Mamak",
+        "description": "Spicy Indian fried noodles with egg and tofu.",
+        "image": "images/recipes/mee_mamak.jpg",
+        "time": "15 mins",
+        "difficulty": "Easy",
+        "cuisine": "Indian",
+        "ingredients": [
+            "Yellow noodles",
+            "Egg",
+            "Tofu",
+            "Soy sauce",
+            "Chili paste"
+        ],
+        "instructions": [
+            "Heat wok and fry tofu and egg.",
+            "Add noodles and sauces.",
+            "Stir-fry until coated.",
+            "Serve with lime."
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Hinava",
+        "description": "A traditional Kadazan-Dusun dish from Sabah, featuring raw fish marinated in lime juice, mixed with shallots, chili, and local herbs.",
+        "image": "images/recipes/hinava.jpg",
+        "time": "40 mins",
+        "difficulty": "Medium",
+        "cuisine": "Malay",
+        "ingredients": [
+            "200g fresh fish fillet (mackerel or tuna), sliced thinly",
+            "2 tbsp lime juice",
+            "1 small onion, sliced",
+            "2 red chilies, sliced",
+            "Salt to taste",
+            "Fresh herbs (coriander or local herbs)"
+        ],
+        "instructions": [
+            "Place thinly sliced fish in a bowl and pour lime juice over it. Let it marinate for 15-20 minutes.",
+            "Add sliced onion, chilies, salt, and fresh herbs.",
+            "Toss gently to combine.",
+            "Serve chilled as an appetizer or side dish."
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Tuaran Mee",
+        "description": "A popular Chinese-style stir-fried noodle dish from Tuaran, Sabah, featuring springy noodles, egg, meat, and vegetables.",
+        "image": "images/recipes/tuaran_mee.jpg",
+        "time": "10 mins",
+        "difficulty": "Easy",
+        "cuisine": "Chinese",
+        "ingredients": [
+            "200g Tuaran noodles (or egg noodles)",
+            "50g chicken or pork slices",
+            "1 egg",
+            "50g vegetables (cabbage, carrots, bean sprouts)",
+            "2 cloves garlic, minced",
+            "2 tbsp soy sauce",
+            "Oil for stir-frying"
+        ],
+        "instructions": [
+            "Cook noodles until al dente and drain.",
+            "Stir-fry garlic and meat until cooked.",
+            "Add vegetables and sauté briefly.",
+            "Add noodles and soy sauce, stir-fry until everything is well combined.",
+            "Push noodles aside, scramble egg, then mix together.",
+            "Serve hot."
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Roti Canai with Curry",
+        "description": "Classic Indian flatbread served with dhal curry.",
+        "image": "images/recipes/roti-canai.jpg",
+        "time": "20 mins",
+        "difficulty": "Easy",
+        "cuisine": "Indian",
+        "ingredients": [
+            "Flour",
+            "Egg",
+            "Ghee",
+            "Salt",
+            "Water"
+        ],
+        "instructions": [
+            "Prepare dough and rest.",
+            "Stretch thin, fold, and pan-fry.",
+            "Serve with dhal curry."
+        ]
+    }
+]
