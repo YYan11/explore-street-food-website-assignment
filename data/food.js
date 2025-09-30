@@ -563,3 +563,4 @@ export const foods = [
     return new Food(foodDetails);
 });
 
+
