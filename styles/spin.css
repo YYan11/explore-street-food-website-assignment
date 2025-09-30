@@ -1,0 +1,181 @@
+/***************************************************************************************************************************************************************/
+/*   The Swiper CSS are referenced and modified from GitHub: https://github.com/emetdas/Youtube-code/tree/master/web%20components/Swiper-Slider-3D-Coverflow   */
+/***************************************************************************************************************************************************************/
+
+/* Basic */
+:root {
+  --primary: #ec994b;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.0;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Swiper */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    padding: 10px;
+}
+
+#spin {
+  padding: 4rem 0;
+  margin-top: 0rem;
+}
+
+@media (max-width:1440px) {
+  #spin {
+    padding: 7rem 0;
+  }
+}
+
+#spin .spin-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #spin .spin-slider {
+    height: 45rem;
+  }
+}
+
+.spin-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  .spin-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .spin-slide .spin-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.spin-slide .spin-slide-img img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.spin-slide .spin-slide-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+
+.food-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+ion-icon {
+  color: var(--primary);
+}
+
+/* Spin button */
+.btn-spin {
+  border-radius: 15px;
+  background-color: #8B4513;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 2.0rem;
+  position: relative;
+}
+
+.btn-spin:hover {
+  background-color: #5C3317;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(92, 51, 23, 0.4);
+  transform: scale(1.05);
+}
+
+/* Back to top button */
+#backToTop {
+  font-size: 7rem;
+  color: #5C3317;
+  background: none;
+  border: none;
+  display: inline-block;
+  margin: 2rem auto;       /* top/bottom spacing */
+  position: relative;      /* relative to its container */
+  left: 3%;               /* start from center */
+  transform: translateX(-50%); /* truly center it horizontally */
+}
+
+/* Food details */
+#details-row {
+  margin-top: 10rem;
+  margin-bottom: 0rem;
+  display: none;
+}
+
+#dynamic-content {
+  min-height: 100rem;
+  display: none;
+}
+
+.card {
+  background: #f5f0e6;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1600px;
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
+}
+
+.card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 1.6;
+  color: #452a11;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+.card p strong {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #452a11;
+  font-weight: bold;
+}

@@ -1,0 +1,92 @@
+.hero {
+    background: url('../images/banner.png') center/cover no-repeat;
+    background-position: 50% 40%;
+    height: 60vh;
+}
+
+.about-us {
+    background-color: #f9f9f9;
+}
+
+.about-us img {
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border: 8px solid;
+    width: 100%;
+}
+
+.about-us h2 {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.about-us p {
+    font-size: 0.95rem;
+}
+
+/* Button hover animation */
+.about-us button {
+  transition: all 0.3s ease;
+}
+
+.about-us button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.malaysia-map {
+  background-color: #fff8f0;
+}
+
+.map-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.state {
+  fill: #ffcc80;
+  stroke: #333;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+.state:hover {
+  fill: #ff6b3c;
+}
+
+/* Tooltip */
+.map-tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  pointer-events: none;
+  display: none;
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .about-us h2 {
+    font-size: 2rem;
+  }
+  .about-us p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .about-us h2 {
+    font-size: 2.2rem;
+  }
+  .about-us p {
+    font-size: 1.2rem;
+  }
+}
