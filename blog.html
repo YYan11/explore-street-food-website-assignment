@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Street Food Explorer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Footer CSS-->
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <!-- General CSS -->
+    <link rel="stylesheet" href="styles/general.css">
+
+    <!-- Blog CSS -->
+    <link rel="stylesheet" href="styles/blog.css">
+</head>
+<body class="blog-body">
+    <!-- Navigation -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow fixed-top px-4">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="homepage.html" class="navbar-brand fw-bold">MyStreet Food</a>
+
+            <!-- Hamburger button for mobile -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto f d-flex gap-3 justify-content-center">
+                    <li class="nav-item"><a href="homepage.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                    <!-- Blog Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="showWriteBlogModal()">Write Blog</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showMyPostsModal()">My Posts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="recipe.html" class="nav-link">Recipe</a></li>
+                    <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
+                    <li class="nav-item"><a href="spin.html" class="nav-link">Spin To Eat</a></li>
+                    <li class="nav-item me-3"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <button id="logoutBtn" class="btn btn-primary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-3">Malaysian Street Food Stories</h1>
+                    <p class="lead mb-4">Discover the rich flavors and heritage of Malaysia's incredible street food culture</p>
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <div class="input-group">
+                                <input type="text" class="form-control search-box" placeholder="Search blog posts..." id="searchInput">
+                                <button class="btn search-btn" type="button" onclick="searchPosts()">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write Blog Modal -->
+    <div class="modal fade" id="writeBlogModal" tabindex="-1" aria-labelledby="writeBlogModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">
+                    <h5 class="modal-title" id="writeBlogModalLabel"><i class="fas fa-pen-fancy"></i> Write Your Malaysian Street Food Story</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="blogPostForm">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                    <label for="blogTitle" class="form-label"><strong>Blog Title *</strong></label>
+                                    <input type="text" class="form-control" id="blogTitle" placeholder="e.g., My Adventure with Ipoh White Coffee" maxlength="100" required>
+                                    <div class="form-text">Give your story an engaging title (max 100 characters)</div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="blogAuthor" class="form-label"><strong>Your Name *</strong></label>
+                                    <input type="text" class="form-control" id="blogAuthor" placeholder="e.g., Ahmad Rahman" maxlength="50" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="blogCategory" class="form-label"><strong>Category *</strong></label>
+                                    <select class="form-select" id="blogCategory" required>
+                                        <option value="">Choose a category...</option>
+                                        <option value="noodles">Noodles & Kuey Teow</option>
+                                        <option value="rice">Rice Dishes</option>
+                                        <option value="satay">Grilled & Satay</option>
+                                        <option value="curry">Curry & Soup</option>
+                                        <option value="dessert">Desserts & Drinks</option>
+                                        <option value="bread">Bread & Roti</option>
+                                        <option value="snacks">Snacks & Appetizers</option>
+                                        <option value="experience">Food Experience</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="blogTags" class="form-label"><strong>Tags</strong></label>
+                                    <input type="text" class="form-control" id="blogTags" placeholder="e.g., penang, laksa, spicy, authentic (separate with commas)">
+                                    <div class="form-text">Add relevant tags to help others find your post</div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="blogContent" class="form-label"><strong>Your Story *</strong></label>
+                                    <div class="writing-tools mb-2">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('bold')"><i class="fas fa-bold"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('italic')"><i class="fas fa-italic"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="insertTemplate('recipe')">Recipe Template</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="insertTemplate('review')">Review Template</button>
+                                        <span class="ms-3 text-muted">Words: <span id="wordCount">0</span></span>
+                                    </div>
+                                    <textarea class="form-control" id="blogContent" rows="12" placeholder="Share your Malaysian street food experience, recipe, or discovery..." required></textarea>
+                                    <div class="form-text">Tell your story! Include details about taste, location, cooking method, or personal experience.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0"><i class="fas fa-image"></i> Featured Image</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="blogImageUrl" class="form-label">Image URL</label>
+                                            <input type="url" class="form-control" id="blogImageUrl" placeholder="https://example.com/image.jpg">
+                                            <div class="form-text">Or use our image generator below</div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Quick Image Generator</label>
+                                            <div class="d-grid gap-2">
+                                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="generateFoodImage('nasi-lemak')">Nasi Lemak</button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="generateFoodImage('char-kuey-teow')">Char Kuey Teow</button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="generateFoodImage('satay')">Satay</button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="generateFoodImage('laksa')">Laksa</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="imagePreview" class="text-center" style="display: none;">
+                                            <img id="previewImg" src="" alt="Preview" class="img-fluid rounded" style="max-height: 150px;">
+                                            <div class="mt-2">
+                                                <small class="text-muted">Image Preview</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card mt-3">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0"><i class="fas fa-map-marker-alt"></i> Location</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-2">
+                                            <label for="blogLocation" class="form-label">Where did you try this?</label>
+                                            <input type="text" class="form-control" id="blogLocation" placeholder="e.g., Penang Road, Georgetown">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="blogStallName" class="form-label">Stall/Restaurant Name</label>
+                                            <input type="text" class="form-control" id="blogStallName" placeholder="e.g., Ah Leng Char Kuey Teow">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card mt-3">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0"><i class="fas fa-star"></i> Rating</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="rating-input mb-2">
+                                            <span class="rating-star" data-rating="1">⭐</span>
+                                            <span class="rating-star" data-rating="2">⭐</span>
+                                            <span class="rating-star" data-rating="3">⭐</span>
+                                            <span class="rating-star" data-rating="4">⭐</span>
+                                            <span class="rating-star" data-rating="5">⭐</span>
+                                        </div>
+                                        <input type="hidden" id="blogRating" value="5">
+                                        <small class="text-muted">Rate this food experience</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="saveDraft()"><i class="fas fa-save"></i> Save Draft</button>
+                    <button type="button" class="btn read-more-btn" onclick="publishBlogPost()"><i class="fas fa-paper-plane"></i> Publish Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Posts Modal -->
+    <div class="modal fade" id="myPostsModal" tabindex="-1" aria-labelledby="myPostsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">
+                    <h5 class="modal-title" id="myPostsModalLabel"><i class="fas fa-file-alt"></i> My Blog Posts</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="userPostsList">
+                        <!-- User posts will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5" style="padding-top: 50px;">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-lg-8">
+                <div class="row" id="blogPosts">
+                    <!-- Blog Post 1 -->
+                    <div class="col-md-6 fade-in blog-post" data-category="noodles" data-tags="char-kuey-teow,penang,wok-hei">
+                        <div class="card blog-card">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect fill='%23FF8C00' width='400' height='250'/><circle fill='%23FFD700' cx='200' cy='125' r='80' opacity='0.9'/><rect fill='%23FF6B35' x='120' y='100' width='160' height='8' rx='4' opacity='0.8'/><rect fill='%23FF6B35' x='130' y='120' width='140' height='6' rx='3' opacity='0.7'/><text x='200' y='190' text-anchor='middle' fill='white' font-size='16' font-weight='bold'>Curry Laksa</text></svg>" class="card-img-top" alt="Curry Laksa">
+                            <div class="card-body">
+                                <h5 class="card-title">Penang Curry Laksa: A Bowl of Heritage</h5>
+                                <div class="blog-meta mb-3">
+                                    <i class="fas fa-calendar"></i> March 8, 2025
+                                    <i class="fas fa-user ms-3"></i> By Nyonya Lee
+                                    <i class="fas fa-eye ms-3"></i> <span class="view-count">2,134</span> views
+                                </div>
+                                <p class="card-text">Dive into the rich, spicy broth of Penang's curry laksa and the cultural fusion that created this iconic dish.</p>
+                                <div class="mb-3">
+                                    <span class="tag">Curry Laksa</span>
+                                    <span class="tag">Coconut Curry</span>
+                                    <span class="tag">Penang</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn read-more-btn" onclick="readPost('penang-curry-laksa')">Read More</button>
+                                    <button class="btn btn-outline-danger btn-sm" onclick="likePost('penang-curry-laksa')">
+                                        <i class="fas fa-heart"></i> <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 5 -->
+                    <div class="col-md-6 fade-in blog-post" data-category="dessert" data-tags="cendol,ice-kachang,penang">
+                        <div class="card blog-card">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect fill='%234169E1' width='400' height='250'/><rect fill='%2300FF00' x='150' y='80' width='4' height='60' opacity='0.8'/><rect fill='%2300FF00' x='160' y='75' width='4' height='70' opacity='0.8'/><rect fill='%2300FF00' x='170' y='85' width='4' height='55' opacity='0.8'/><rect fill='%2300FF00' x='180' y='70' width='4' height='75' opacity='0.8'/><circle fill='%23FFFFFF' cx='200' cy='180' r='25' opacity='0.9'/><text x='200' y='220' text-anchor='middle' fill='white' font-size='16' font-weight='bold'>Cendol</text></svg>" class="card-img-top" alt="Cendol">
+                            <div class="card-body">
+                                <h5 class="card-title">Cendol & Ice Kachang: Sweet Relief</h5>
+                                <div class="blog-meta mb-3">
+                                    <i class="fas fa-calendar"></i> March 5, 2025
+                                    <i class="fas fa-user ms-3"></i> By Uncle Wong
+                                    <i class="fas fa-eye ms-3"></i> <span class="view-count">1,678</span> views
+                                </div>
+                                <p class="card-text">Beat the Malaysian heat with these beloved iced desserts that have been cooling down locals for generations.</p>
+                                <div class="mb-3">
+                                    <span class="tag">Cendol</span>
+                                    <span class="tag">Ice Kachang</span>
+                                    <span class="tag">Dessert</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn read-more-btn" onclick="readPost('malaysian-ice-desserts')">Read More</button>
+                                    <button class="btn btn-outline-danger btn-sm" onclick="likePost('malaysian-ice-desserts')">
+                                        <i class="fas fa-heart"></i> <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 6 -->
+                    <div class="col-md-6 fade-in blog-post" data-category="bread" data-tags="roti-canai,mamak,indian-muslim">
+                        <div class="card blog-card">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect fill='%23DEB887' width='400' height='250'/><ellipse fill='%23F5DEB3' cx='200' cy='125' rx='80' ry='40' opacity='0.9'/><ellipse fill='%23FFE4B5' cx='200' cy='125' rx='60' ry='30' opacity='0.8'/><text x='200' y='200' text-anchor='middle' fill='%238B4513' font-size='16' font-weight='bold'>Roti Canai</text></svg>" class="card-img-top" alt="Roti Canai">
+                            <div class="card-body">
+                                <h5 class="card-title">Roti Canai: The Mamak Legend</h5>
+                                <div class="blog-meta mb-3">
+                                    <i class="fas fa-calendar"></i> March 3, 2025
+                                    <i class="fas fa-user ms-3"></i> By Mohd Rashid
+                                    <i class="fas fa-eye ms-3"></i> <span class="view-count">2,567</span> views
+                                </div>
+                                <p class="card-text">Watch the mesmerizing art of roti canai making and learn about the Indian-Muslim community's gift to Malaysian cuisine.</p>
+                                <div class="mb-3">
+                                    <span class="tag">Roti Canai</span>
+                                    <span class="tag">Mamak</span>
+                                    <span class="tag">Indian-Muslim</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn read-more-btn" onclick="readPost('roti-canai-mastery')">Read More</button>
+                                    <button class="btn btn-outline-danger btn-sm" onclick="likePost('roti-canai-mastery')">
+                                        <i class="fas fa-heart"></i> <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-4">
+                    <button class="btn read-more-btn" onclick="loadMorePosts()">Load More Posts</button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Categories -->
+                <div class="sidebar fade-in">
+                    <h5><i class="fas fa-list"></i> Categories</h5>
+                    <div class="category-item" onclick="filterPosts('all')">All Posts <span class="float-end badge bg-primary">6</span></div>
+                    <div class="category-item" onclick="filterPosts('noodles')">Noodles & Kuey Teow <span class="float-end badge bg-primary">1</span></div>
+                    <div class="category-item" onclick="filterPosts('rice')">Rice Dishes <span class="float-end badge bg-primary">1</span></div>
+                    <div class="category-item" onclick="filterPosts('satay')">Grilled & Satay <span class="float-end badge bg-primary">1</span></div>
+                    <div class="category-item" onclick="filterPosts('curry')">Curry & Soup <span class="float-end badge bg-primary">1</span></div>
+                    <div class="category-item" onclick="filterPosts('dessert')">Desserts & Drinks <span class="float-end badge bg-primary">1</span></div>
+                    <div class="category-item" onclick="filterPosts('bread')">Bread & Roti <span class="float-end badge bg-primary">1</span></div>
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="sidebar fade-in">
+                    <h5><i class="fas fa-clock"></i> Recent Posts</h5>
+                    <div class="recent-post" onclick="readPost('char-kuey-teow-guide')">
+                        <strong>The Art of Perfect Char Kuey Teow</strong>
+                        <div class="blog-meta">March 15, 2025</div>
+                    </div>
+                    <div class="recent-post" onclick="readPost('nasi-lemak-story')">
+                        <strong>Nasi Lemak: Malaysia's National Pride</strong>
+                        <div class="blog-meta">March 12, 2025</div>
+                    </div>
+                    <div class="recent-post" onclick="readPost('kajang-satay-tradition')">
+                        <strong>Kajang Satay: The King of Skewers</strong>
+                        <div class="blog-meta">March 10, 2025</div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="newsletter fade-in">
+                    <h5><i class="fas fa-envelope"></i> Newsletter</h5>
+                    <p>Get the latest street food stories delivered to your inbox!</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email" id="newsletterEmail">
+                        <button class="btn btn-light" type="button" onclick="subscribeNewsletter()">Subscribe</button>
+                    </div>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="sidebar fade-in">
+                    <h5><i class="fas fa-tags"></i> Popular Tags</h5>
+                    <div>
+                        <span class="tag" onclick="filterByTag('nasi-lemak')">Nasi Lemak</span>
+                        <span class="tag" onclick="filterByTag('char-kuey-teow')">Char Kuey Teow</span>
+                        <span class="tag" onclick="filterByTag('satay')">Satay</span>
+                        <span class="tag" onclick="filterByTag('curry-laksa')">Curry Laksa</span>
+                        <span class="tag" onclick="filterByTag('roti-canai')">Roti Canai</span>
+                        <span class="tag" onclick="filterByTag('cendol')">Cendol</span>
+                        <span class="tag" onclick="filterByTag('penang')">Penang</span>
+                        <span class="tag" onclick="filterByTag('mamak')">Mamak</span>
+                        <span class="tag" onclick="filterByTag('wok-hei')">Wok Hei</span>
+                        <span class="tag" onclick="filterByTag('sambal')">Sambal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h5>Quick Links:</h5>
+            <div class="row">
+                <div class="col-1">
+                    <a href="FAQ.html" class="text-light">FAQ</a>
+                </div>
+                <div class="col-2">
+                    <a href="privacy.html" class="text-light">Privacy Policy</a>
+                </div>
+                <div class="col-2">
+                    <a href="terms.html" class="text-light">Terms of Service</a>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Malaysian Street Food Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- Session protection -->
+    <script src="scripts/utils/auth.js"></script>
+
+    <!-- Logout logic -->
+    <script src="scripts/utils/logout.js"></script>
+    
+    <script src="scripts/blog.js"></script>
+</body>
+</html>

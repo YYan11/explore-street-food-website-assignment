@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Street Food Explorer - Progress</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <!-- Footer CSS-->
+        <link rel="stylesheet" href="styles/footer.css">
+
+        <!-- General CSS -->
+        <link rel="stylesheet" href="styles/general.css">
+
+        <!-- Progress CSS -->
+        <link rel="stylesheet" href="styles/progress.css">
+
+        <!-- Progress JS -->
+        <script src="scripts/progress.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow fixed-top px-4">
+                <div class="container-fluid">
+                    <!-- Brand -->
+                    <a href="homepage.html" class="navbar-brand fw-bold">MyStreet Food</a>
+
+                    <!-- Hamburger button for mobile -->
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Nav Items -->
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="navbar-nav ms-auto f d-flex gap-3 justify-content-center">
+                            <li class="nav-item"><a href="homepage.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="recipe.html" class="nav-link">Recipe</a></li>
+                            <li class="nav-item"><a href="progress.html" class="nav-link active" aria-current="page">Progress</a></li>
+                            <li class="nav-item"><a href="spin.html" class="nav-link">Spin To Eat</a></li>
+                            <li class="nav-item me-3"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                        </ul>
+                        <button id="logoutBtn" class="btn btn-primary">Logout</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Background-->
+        <section class="background">
+            <img src="images/background.jpg" alt="Background Image">
+
+            <!-- Background Text-->
+            <div class="background-text">
+                <h1>Progress</h1>
+                <p>Track your food journey and celebrate your achievements with our progress tracker.</p>
+            </div>
+        </section>
+
+        <!--Progess Tracking-->
+        <div class="container">
+            <div class="progress-overview">
+                <div class="grid">
+                    <div class="progress-card">
+                        <div class="progress-number" id="foods-tried">0</div>
+                        <div class="progress-label">Foods Tried</div>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-number" id="chinese-explored">0</div>
+                        <div class="progress-label">Chinese Foods Explored</div>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-number" id="malay-explored">0</div>
+                        <div class="progress-label">Malay Foods Explored</div>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-number" id="indian-explored">0</div>
+                        <div class="progress-label">Indian Foods Explored</div>
+                    </div>
+                </div>
+
+                <div class="overall-progress">
+                    <div class="progress-circle">
+                        <div class="progress-text" id="overall-progress">0%</div>
+                    </div>
+                    <h3>Overall Progress</h3>
+                </div>
+            </div>
+
+            <section class="progress-details">
+                <h2>Your Food Journey</h2>
+                <p>Keep exploring and trying new street foods to enhance your culinary adventure!</p>
+
+                <div class="area-grid">
+                    <div class="area-card">
+                        <div class="area-name">Chinese Foods</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="food-tried">
+                            <label class="food-tag"><input type="checkbox" data-category="chinese"
+                                    data-food="Char Kuey Teow"> Char Kuey Teow</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Loh Bak">
+                                Loh Bak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese"
+                                    data-food="Ipoh Bean Sprout Chicken">
+                                Ipoh Bean Sprout Chicken</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Bak Kut Teh">
+                                Bak Kut Teh</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese"
+                                    data-food="Chicken Rice Ball"> Chicken Rice Ball</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese"
+                                    data-food="Seremban-style Baked Crab"> Seremban-style Baked Crab</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Durian Cendol">
+                                Durian Cendol</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Curry Mee">
+                                Curry Mee</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Prawn Mee">
+                                Prawn Mee</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese"
+                                    data-food="Teochew Porridge"> Teochew Porridge</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese"
+                                    data-food="Ipoh Chicken Hor Fun"> Ipoh Chicken Hor Fun</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Kolo Mee">
+                                Kolo Mee</label>
+                            <label class="food-tag"><input type="checkbox" data-category="chinese" data-food="Tuaran Mee">
+                                Tuaran Mee</label>
+                        </div>
+                    </div>
+
+                    <div class="area-card">
+                        <div class="area-name">Malay Foods</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="food-tried">
+                            <label class="food-tag"><input type="checkbox" data-category="malay" data-food="Ikan Bakar">
+                                Ikan Bakar</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay" data-food="Pekasam Puyu">
+                                Pekasam Puyu</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay" data-food="Nasi Lemuni">
+                                Nasi Lemuni</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Satay Kajang">Satay Kajang</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Nyonya Laksa">Nyonya Laksa</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Masak Lemak Cili Padi">Masak Lemak Cili Padi</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Otak-Otak">Otak-Otak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Gulai Ikan Temenung">Gulai Ikan Temenung</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Nasi Kerabu">Nasi Kerabu</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Nasi Dagang Terengganu">Nasi Dagang Terengganu</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Ikan Patin Masak Tempoyak">Ikan Patin Masak Tempoyak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Midin Goreng">Midin Goreng</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Hinava">Hinava</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Kuih Akok">Kuih Akok</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Ayam Percik">Ayam Percik</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Rendang Tok">Rendang Tok</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Sinalau Bakas">Sinalau Bakas</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Ikan Terubuk Sarawak">Ikan Terubuk Sarawak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Rojak">Rojak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="malay"
+                                    data-food="Keropok Lekor">Keropok Lekor</label>
+
+                        </div>
+                    </div>
+
+                    <div class="area-card">
+                        <div class="area-name">Indian Foods</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="food-tried">
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Nasi Kandar">
+                                Nasi Kandar</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Apam Perlis">
+                                Apam Perlis</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Appam Perak">
+                                Appam Perak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian"
+                                    data-food="Banana Leaf Rice">
+                                Banana Leaf Rice</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Putu Piring">
+                                Putu Piring</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Vadai">
+                                Vadai</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Kothu Parotta">
+                                Kothu Parotta</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian"
+                                    data-food="Roti Canai Tsunami">
+                                Roti Canai Tsunami</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Roti Jala">
+                                Roti Jala</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Thosai">
+                                Thosai</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Murtabak">
+                                Murtabak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Mee Mamak">
+                                Mee Mamak</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian"
+                                    data-food="Roti Canai with Curry">
+                                Roti Canai with Curry</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Roti Telur">
+                                Roti Telur</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Roti John">
+                                Roti John</label>
+                            <label class="food-tag"><input type="checkbox" data-category="indian" data-food="Roti Tisu">
+                                Roti Tisu</label>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="achievements">
+                <h2>Achievements</h2>
+                <p>Celebrate your milestones and unlock badges as you explore more street foods!</p>
+                <div class="achievements-grid">
+                    <div class="achievements-card" data-condition="1">
+                        <div class="achievements-title">First Bite</div>
+                        <div class="achievements-description">Try your first street food</div>
+                    </div>
+                    <div class="achievements-card" data-condition="5">
+                        <div class="achievements-title">Street Food Rookie</div>
+                        <div class="achievements-description">Try 5 street foods</div>
+                    </div>
+
+                    <div class="achievements-card" data-condition="15">
+                        <div class="achievements-title">Culinary Explorer</div>
+                        <div class="achievements-description">Try 15 street foods</div>
+                    </div>
+
+                    <div class="achievements-card" data-condition="20">
+                        <div class="achievements-title">Culinary Explorer</div>
+                        <div class="achievements-description">Try 20 street foods</div>
+                    </div>
+
+                    <div class="achievements-card" data-condition="30">
+                        <div class="achievements-title">Food Adventurer</div>
+                        <div class="achievements-description">Try 30 street foods</div>
+                    </div>
+
+                    <div class="achievements-card" data-condition="39">
+                        <div class="achievements-title">Food Hunter</div>
+                        <div class="achievements-description">All street food has been explored!</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <h5>Quick Links:</h5>
+                <div class="row">
+                    <div class="col-1">
+                        <a href="FAQ.html" class="text-light">FAQ</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="privacy.html" class="text-light">Privacy Policy</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="terms.html" class="text-light">Terms of Service</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p>&copy; 2025 Malaysian Street Food Explorer. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <!-- Session protection -->
+        <script src="scripts/utils/auth.js"></script>
+
+        <!-- Logout logic -->
+        <script src="scripts/utils/logout.js"></script>
+
+    </body>
+</html>

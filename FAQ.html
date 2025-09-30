@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Malaysian Street Food Explorer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Footer CSS-->
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <!-- FAQ CSS -->
+    <link rel="stylesheet" href="styles/FAQ.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-utensils me-2"></i>MyStreet Food
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto f d-flex gap-3 justify-content-center">
+                    <li class="nav-item"><a href="homepage.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="recipe.html" class="nav-link">Recipe</a></li>
+                    <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
+                    <li class="nav-item"><a href="spin.html" class="nav-link">Spin To Eat</a></li>
+                    <li class="nav-item me-3"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <button id="logoutBtn" class="btn btn-primary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h1 class="section-title">Frequently Asked Questions</h1>
+                    <p class="lead">Discover everything you need to know about Malaysian street food</p>
+                    
+                    <!-- Search FAQ -->
+                    <div class="search-faq">
+                        <input type="text" class="form-control" id="faqSearch" placeholder="Search frequently asked questions...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <div class="stats-card fade-in">
+                        <div class="stats-number" id="totalQuestions">6</div>
+                        <div>Total Questions</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card fade-in">
+                        <div class="stats-number" id="viewedFaqs">0</div>
+                        <div>Questions Viewed</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card fade-in">
+                        <div class="stats-number" id="searchCount">0</div>
+                        <div>Searches Made</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-container">
+                <div id="faqResults">
+                    <!-- FAQ 1: Popular Foods -->
+                    <div class="faq-item fade-in" data-keywords="popular food dishes char kway teow nasi lemak roti canai laksa satay">
+                        <button class="faq-header" onclick="toggleFaq(1)">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">What are the most popular Malaysian street foods?</h5>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content" id="content-1">
+                            <p class="lead">Malaysia's street food scene reflects its rich multicultural heritage:</p>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3"><strong>Char Kway Teow</strong> - Wok-fried flat rice noodles with prawns, Chinese sausage, and bean sprouts</li>
+                                        <li class="mb-3"><strong>Nasi Lemak</strong> - Fragrant coconut rice with spicy sambal, anchovies, peanuts, and egg</li>
+                                        <li class="mb-3"><strong>Roti Canai</strong> - Flaky flatbread served with aromatic curry</li>
+                                        <li class="mb-3"><strong>Laksa</strong> - Spicy noodle soup in coconut milk or tamarind broth</li>
+                                        <li class="mb-0"><strong>Satay</strong> - Grilled meat skewers with rich peanut sauce</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        <strong>Cultural Fusion</strong><br>
+                                        These dishes showcase Malaysia's unique blend of Malay, Chinese, and Indian traditions.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2: Food Safety -->
+                    <div class="faq-item fade-in" data-keywords="safe safety food hygiene clean healthy tips">
+                        <button class="faq-header" onclick="toggleFaq(2)">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Is Malaysian street food safe to eat?</h5>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content" id="content-2">
+                            <p class="lead">Malaysian street food is generally safe when you follow smart guidelines:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-success"><i class="fas fa-check me-2"></i>Best Practices</h6>
+                                    <ul>
+                                        <li>Choose stalls with high customer turnover</li>
+                                        <li>Ensure food is cooked thoroughly and served hot</li>
+                                        <li>Use hand sanitizer before eating</li>
+                                        <li>Drink bottled water or boiled beverages</li>
+                                        <li>Look for places popular with locals</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-danger"><i class="fas fa-times me-2"></i>Avoid</h6>
+                                    <ul>
+                                        <li>Food sitting out for long periods</li>
+                                        <li>Raw items if you have a sensitive stomach</li>
+                                        <li>Ice from questionable sources</li>
+                                        <li>Stalls with poor hygiene</li>
+                                        <li>Unwashed fruits and vegetables</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3: Best Times -->
+                    <div class="faq-item fade-in" data-keywords="night market time hours when best visit">
+                        <button class="faq-header" onclick="toggleFaq(3)">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">What are the best times to visit night markets?</h5>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content" id="content-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card border-info h-100">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-clock text-primary mb-2" style="font-size: 2rem;"></i>
+                                            <h6>6:00-7:00 PM</h6>
+                                            <small>Opening - Limited variety, shorter queues</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-success h-100">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-star text-success mb-2" style="font-size: 2rem;"></i>
+                                            <h6>7:30-9:30 PM</h6>
+                                            <small>Prime Time - Fresh food, lively atmosphere</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-warning h-100">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-percentage text-warning mb-2" style="font-size: 2rem;"></i>
+                                            <h6>10:30-11:00 PM</h6>
+                                            <small>Closing - Discounts, limited selection</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4: Costs -->
+                    <div class="faq-item fade-in" data-keywords="cost price money cheap expensive how much ringgit">
+                        <button class="faq-header" onclick="toggleFaq(4)">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">How much does street food cost in Malaysia?</h5>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content" id="content-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6><i class="fas fa-utensils me-2"></i>Main Dishes</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span>Char Kway Teow</span> <strong>RM 5-8</strong>
+                                        </li>
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span>Nasi Lemak</span> <strong>RM 3-6</strong>
+                                        </li>
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span>Roti Canai</span> <strong>RM 1-2</strong>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <span>Laksa</span> <strong>RM 4-7</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6><i class="fas fa-glass-water me-2"></i>Drinks & Snacks</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span>Teh Tarik</span> <strong>RM 1.50-2.50</strong>
+                                        </li>
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span>Fresh Juice</span> <strong>RM 2-4</strong>
+                                        </li>
+                                        <li class="d-flex justify-content-between mb-2">
+                                            <span>Satay (per stick)</span> <strong>RM 0.80-1.20</strong>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <span>Cendol</span> <strong>RM 2-3</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="alert alert-info mt-3">
+                                <i class="fas fa-dollar-sign me-2"></i>
+                                <strong>Budget:</strong> A complete meal typically costs RM 8-15 ($1.90-$3.50 USD). Bring cash!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5: Spice Level -->
+                    <div class="faq-item fade-in" data-keywords="spicy level heat chili mild moderate hot">
+                        <button class="faq-header" onclick="toggleFaq(5)">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">How spicy is Malaysian street food?</h5>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content" id="content-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="text-center p-3 border rounded">
+                                        <i class="fas fa-pepper-hot text-success mb-2" style="font-size: 2rem;"></i>
+                                        <h6 class="text-success">Mild</h6>
+                                        <small>Roti canai, some nasi lemak, teh tarik</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center p-3 border rounded">
+                                        <div class="mb-2">
+                                            <i class="fas fa-pepper-hot text-warning"></i>
+                                            <i class="fas fa-pepper-hot text-warning"></i>
+                                        </div>
+                                        <h6 class="text-warning">Moderate</h6>
+                                        <small>Most char kway teow, mee goreng, standard laksa</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center p-3 border rounded">
+                                        <div class="mb-2">
+                                            <i class="fas fa-pepper-hot text-danger"></i>
+                                            <i class="fas fa-pepper-hot text-danger"></i>
+                                            <i class="fas fa-pepper-hot text-danger"></i>
+                                        </div>
+                                        <h6 class="text-danger">Hot</h6>
+                                        <small>Penang assam laksa, extra spicy dishes</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="alert alert-info">
+                                        <strong>Managing Spice:</strong> Say "Kurang pedas" (less spicy) when ordering. Keep dairy drinks handy!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alert alert-warning">
+                                        <strong>Emergency Kit:</strong> Don't drink water. Eat rice, bread, or ice cream instead.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6: Cookies and Tracking -->
+                    <div class="faq-item fade-in" data-keywords="cookies tracking privacy data analytics marketing social media browser">
+                        <button class="faq-header" onclick="toggleFaq(6)">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">What cookies and tracking technologies do you use?</h5>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content" id="content-6">
+                            <div id="cookies-tracking" class="policy-section fade-in">
+                                <h4><i class="fas fa-cookie-bite text-primary"></i>Cookies and Tracking Technologies</h4>
+                                <p>We use cookies and similar technologies to enhance your browsing experience:</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th>Cookie Type</th>
+                                                <th>Purpose</th>
+                                                <th>Duration</th>
+                                                <th>Required</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Essential Cookies</strong></td>
+                                                <td>Website functionality, security, preferences</td>
+                                                <td>Session/1 year</td>
+                                                <td><span class="badge bg-danger">Yes</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Analytics Cookies</strong></td>
+                                                <td>Usage statistics, performance monitoring</td>
+                                                <td>2 years</td>
+                                                <td><span class="badge bg-success">No</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Marketing Cookies</strong></td>
+                                                <td>Personalized content, advertising</td>
+                                                <td>1 year</td>
+                                                <td><span class="badge bg-success">No</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Social Media Cookies</strong></td>
+                                                <td>Social sharing, embedded content</td>
+                                                <td>Varies</td>
+                                                <td><span class="badge bg-success">No</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        
+                                <div class="alert alert-info">
+                                    <i class="fas fa-cog me-2"></i>
+                                    <strong>Cookie Control:</strong> You can manage your cookie preferences through your browser settings. However, disabling certain cookies may affect website functionality.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results -->
+                <div id="noResults" class="no-results">
+                    <i class="fas fa-search-minus"></i>
+                    <h4>No matching questions found</h4>
+                    <p>Try different keywords or contact us for specific questions.</p>
+                    <button class="btn btn-outline-primary" onclick="clearSearch()">
+                        <i class="fas fa-undo me-2"></i>Clear Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-question-circle me-3"></i>Still have questions?</h3>
+                        <p class="lead mb-4">Our street food experts are here to help!</p>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <a href="mailto:info@malaysianstreetfood.com" class="btn btn-primary">
+                                <i class="fas fa-envelope me-2"></i>Email Us
+                            </a>
+                            <a href="tel:+60312345678" class="btn btn-outline-primary">
+                                <i class="fas fa-phone me-2"></i>Call Us
+                            </a>
+                            <button class="btn btn-success" onclick="showToast('Live chat coming soon!', 'info')">
+                                <i class="fas fa-comments me-2"></i>Live Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Notification -->
+    <div class="cookie-notification" id="cookieNotification">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0">
+                        <i class="fas fa-cookie-bite me-2"></i>
+                        We use cookies to enhance your experience. By continuing to browse, you agree to our use of cookies as described in our privacy policy.
+                        <a href="privacy.html" class="text-warning">Learn more</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-warning btn-sm me-2" onclick="acceptCookies()">Accept All</button>
+                    <button class="btn btn-outline-light btn-sm me-2" onclick="showCookieSettings()">Settings</button>
+                    <button class="btn btn-outline-light btn-sm" onclick="declineCookies()">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div class="modal fade" id="cookieSettingsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
+                    <h5 class="modal-title"><i class="fas fa-cog me-2"></i>Cookie Preferences</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Choose which cookies you want to allow:</p>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="essentialCookies" checked disabled>
+                        <label class="form-check-label" for="essentialCookies">
+                            <strong>Essential Cookies</strong> <span class="badge bg-danger">Required</span>
+                            <br><small class="text-muted">Necessary for website functionality, security, and preferences</small>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="analyticsCookies" checked>
+                        <label class="form-check-label" for="analyticsCookies">
+                            <strong>Analytics Cookies</strong>
+                            <br><small class="text-muted">Help us improve our website performance and understand usage patterns</small>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="marketingCookies">
+                        <label class="form-check-label" for="marketingCookies">
+                            <strong>Marketing Cookies</strong>
+                            <br><small class="text-muted">Personalized content and targeted advertisements</small>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="socialCookies">
+                        <label class="form-check-label" for="socialCookies">
+                            <strong>Social Media Cookies</strong>
+                            <br><small class="text-muted">Enable social sharing features and embedded content</small>
+                        </label>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Note:</strong> Disabling certain cookies may affect website functionality and your user experience.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveCookiePreferences()">Save Preferences</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h5>Quick Links:</h5>
+            <div class="row">
+                <div class="col-1">
+                    <a href="FAQ.html" class="text-light">FAQ</a>
+                </div>
+                <div class="col-2">
+                    <a href="privacy.html" class="text-light">Privacy Policy</a>
+                </div>
+                <div class="col-2">
+                    <a href="terms.html" class="text-light">Terms of Service</a>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Malaysian Street Food Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Session protection -->
+    <script src="scripts/utils/auth.js"></script>
+
+    <!-- Logout logic -->
+    <script src="scripts/utils/logout.js"></script>
+
+    <script src="scripts/FAQ.js"></script>
+</body>
+</html>
